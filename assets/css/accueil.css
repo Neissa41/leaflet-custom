@@ -1,0 +1,90 @@
+/* section top */
+
+
+.map {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+
+
+.boulangerie1 {
+    position: relative;
+    display: block;
+    border: 0;
+    border-radius: 20px;
+    width: 100px;
+    background-color: chocolate;
+    margin-bottom: 60px;
+    transition: all 0.3s;
+    opacity: 50%;
+}
+
+
+.boulangerie1:hover {
+    opacity: 100%;
+}
+
+
+.legend-list {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+}
+
+.legend-list .legend-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+}
+
+
+.legend-list .legend-item .legend-item-text {
+    font-family: 'Gotham-Light';
+    font-size: 16px;
+    color: #33373f;
+}
+
+.legend-list .legend-item .legend-figure {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*popup*/
+
+
+/*.leaflet-popup {*/
+/*    position: absolute;*/
+/*    text-align: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+.map .leaflet-popup-content-wrapper {
+    width: 340px;
+    height: 280px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.map .leaflet-popup-content {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+.map .leaflet-popup-content img {
+    width: 100%;
+    margin-right : 8px;
+    background-size: cover;
+
+}
+
+
+
+

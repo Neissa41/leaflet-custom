@@ -1,0 +1,136 @@
+/*
+color
+marron : #c06b2e; rgb 192, 107, 46
+gris : #ebebeb;
+beige : #e5bb88 rgb : 231, 183, 127
+bleu foncé : #343840 rgb 52, 56, 64
+ */
+
+
+body {
+    margin: auto;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'intro_rust_lbase';
+    src: url('../fonts/introrustl-base-webfont.woff2') format('woff2'),
+    url('../fonts/introrustl-base-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'intro_rust_h2base';
+    src: url('../fonts/introrusth2-base-webfont.woff2') format('woff2'),
+    url('../fonts/introrusth2-base-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-Book.otf') format('opentype'),
+    url('../fonts/Gotham-Book.woff') format('woff'),
+    url('../fonts/Gotham-Book.ttf') format('truetype'),
+    url('../fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-Bold.otf') format('opentype'),
+    url('../fonts/Gotham-Bold.woff') format('woff'),
+    url('../fonts/Gotham-Bold.ttf') format('truetype'),
+    url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-Light.otf') format('opentype'),
+    url('../fonts/Gotham-Light.woff') format('woff'),
+    url('../fonts/Gotham-Light.ttf') format('truetype'),
+    url('../fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gotham-Medium.otf') format('opentype'),
+    url('../fonts/Gotham-Medium.woff') format('woff'),
+    url('../fonts/Gotham-Medium.ttf') format('truetype'),
+    url('../fonts/Gotham-Medium.svg#Gotham-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea, button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    box-shadow: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Gotham Bold';
+    font-size: 14px;
+}
