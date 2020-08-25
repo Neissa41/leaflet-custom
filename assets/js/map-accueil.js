@@ -3,7 +3,7 @@
 
 $(function () {
 
-
+    /* la map */
     let map = L.map('map')
         .setView([47.0853, 2.3945], 14);
 
@@ -17,7 +17,7 @@ $(function () {
         accessToken: 'pk.eyJ1IjoiY2VsaW5lY2hlbWFpbiIsImEiOiJja2JhbzA0NDcwamp0MzBud2o4ZzY5eTBmIn0.ABZtH9yjXHv0VFOSC2kNNg'
     }).addTo(map);
 
-
+    /* mes icones personnalisées*/
     let LeafIcon = L.Icon.extend({
         options: {
             shadowUrl: 'assets/img/icone-shadow.png',
@@ -28,13 +28,13 @@ $(function () {
             popupAnchor: [-3, -76],
         }
     });
-
     let boulangerieicone = new LeafIcon({iconUrl: 'assets/img/icone-boulangerie.svg'}),
         moulinicone = new LeafIcon({iconUrl: 'assets/img/icone-moulin.svg'}),
         exploitationicone = new LeafIcon({iconUrl: 'assets/img/icone-exploitation.svg'}),
-        activeicone = new LeafIcon({iconUrl: 'assets/img/icone-active.png'}); /*mouseover*/
+        activeicone = new LeafIcon({iconUrl: 'assets/img/icone-active.svg'}); /*mouseover*/
 
 
+    /* Contenu 1 */
     let content1 = "<img src='assets/img/slider-image1.jpg'>" +
         "<b>Boulangerie 1</b>" +
         "<br/><b>adresse</b>" +
@@ -43,13 +43,21 @@ $(function () {
         "<br/><b>ouvert du lundi au samedi de 8h à 19h</b>" +
         "<br/><a href='https://www.google.fr' target='_blank'>le site de la boulangerie 1</a>";
 
+    /* *************************** element 1 ************************* */
+    /* marker 1 */
     let marker1 = L.marker([47.0853, 2.3945], {icon: exploitationicone}).addTo(map).bindPopup(content1);
 
+    /* action sur marker 1 */
     marker1.on('mouseover', function(e) {
-        this.setIcon(activeicone);
-
+         this.setIcon(activeicone);
+        // e.target.setIcon(activeicone);
+    });
+    marker1.on('mouseout', function(e) {
+        this.setIcon(boulangerieicone);
+        // e.target.setIcon(boulangerieicone);
     });
 
+    /* *************************** element 2 ************************* */
 
     let content2 = "<img src='assets/img/slider-image2.jpg'>" +
         "<b>Boulangerie 2</b>" +
@@ -61,6 +69,17 @@ $(function () {
 
     let marker2 = L.marker([47.0867918, 2.3850926], {icon: moulinicone}).addTo(map).bindPopup(content2);
 
+    /* action sur marker 2 */
+    marker2.on('mouseover', function(e) {
+        this.setIcon(activeicone);
+        // e.target.setIcon(activeicone);
+    });
+    marker2.on('mouseout', function(e) {
+        this.setIcon(boulangerieicone);
+        // e.target.setIcon(boulangerieicone);
+    });
+
+    /* *************************** element 3 ************************* */
 
     let content3 = "<img src='assets/img/slider-image3.jpg'>" +
         "<b>Boulangerie 3</b>" +
@@ -72,6 +91,18 @@ $(function () {
 
     let marker3 = L.marker([47.0967918, 2.3850926], {icon: moulinicone}).addTo(map).bindPopup(content3);
 
+    /* action sur marker 3 */
+    marker3.on('mouseover', function(e) {
+        this.setIcon(activeicone);
+        // e.target.setIcon(activeicone);
+    });
+    marker3.on('mouseout', function(e) {
+        this.setIcon(boulangerieicone);
+        // e.target.setIcon(boulangerieicone);
+    });
+
+    /* *************************** element 4 ************************* */
+
     let content4 = "<img src='assets/img/slider-image4.jpg' >" +
         "<b>Boulangerie 4</b>" +
         "<br/><b>adresse</b>" +
@@ -82,7 +113,15 @@ $(function () {
 
     let marker4 = L.marker([47.0767918, 2.3850926], {icon: boulangerieicone}).addTo(map).bindPopup(content4);
 
-
+    /* action sur marker 4 */
+    marker4.on('mouseover', function(e) {
+        this.setIcon(activeicone);
+        // e.target.setIcon(activeicone);
+    });
+    marker4.on('mouseout', function(e) {
+        this.setIcon(boulangerieicone);
+        // e.target.setIcon(boulangerieicone);
+    });
 
 
 
@@ -92,10 +131,7 @@ $(function () {
     $("#boulangerie1").click(function () {
 
         marker1.bindPopup(content1).openPopup();
-
         // alert( "ouvrir une popup");
-
-
     });
 
     $("#boulangerie2").click(function () {
